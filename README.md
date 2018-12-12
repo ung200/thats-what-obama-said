@@ -15,17 +15,17 @@ Part 3: We input this audio2.wav file to a Video synthesizer that outputs a vide
 
 
 ### Highlights of our work:
-Instead of using only one 2-D convolutional layers, we added another convolutional layer with LeakyReLU as our activation function.
-We also did hyperparameter tuning on our randomCNN and tried different combinations which included using two 2-D layers, increasing the output channels, changing the number of epochs, increasing the Leaky ReLU value with each convolutional layer.
-We experimented with using gram instead of gram over time axis also changing the optimizer function from Adam to AdaDelta
-We also changed the filter size from (3,1) to (3,3) which produced smoother spectrogram.
+- Instead of using only one 2-D convolutional layers, we added another convolutional layer with LeakyReLU as our activation function.
+- We also did hyperparameter tuning on our randomCNN and tried different combinations which included using two 2-D layers, increasing the output channels, changing the number of epochs, increasing the Leaky ReLU value with each convolutional layer.
+- We experimented with using gram instead of gram over time axis also changing the optimizer function from Adam to AdaDelta
+- We also changed the filter size from (3,1) to (3,3) which produced smoother spectrogram.
 
 ### What we observe: 
-We concluded that, when we use one 2-D Convolutional Layer, the loss decreases with the increase in the output channels. For example, convolutional layer with output channel 64 produces better results than convolutional layer with 32 output channel.
-Using two 2-D convolutional layers instead of one performed better in style transfer but lagged when it came to content transfer. While using one 2-D convolutional layer performed better in content transfer than the style transfer.
-We also observed that if the content file and the style file has the same duration and the same content, the results are much cleaner.
-Increasing the number of epochs helped in getting promisable results.
-Following are the results obtained on 80k epochs for our different combinations
+- We concluded that, when we use one 2-D Convolutional Layer, the loss decreases with the increase in the output channels. For example, convolutional layer with output channel 64 produces better results than convolutional layer with 32 output channel.
+- Using two 2-D convolutional layers instead of one performed better in style transfer but lagged when it came to content transfer. While using one 2-D convolutional layer performed better in content transfer than the style transfer.
+- We also observed that if the content file and the style file has the same duration and the same content, the results are much cleaner.
+- Increasing the number of epochs helped in getting promisable results.
+- Following are the results obtained on 80k epochs for our different combinations
 
 ### Approaches in detail:
 #### Part 1: Text to Speech
