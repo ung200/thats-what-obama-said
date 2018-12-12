@@ -7,6 +7,7 @@ We are proposing a system that takes any text as input and generates both the co
 
 
 Given a piece of text we generate a final video with Obama speaking the same piece of text. Our approach has three different parts.
+
 Part 1: Convert text to speech (Based on LJSpeech dataset). Here we have used the model which is pre-trained on 24hrs of speech from LJ Speech dataset. We give the model, Obama’s latest tweet and as output we get a audio1.wav file in a lady’s voice
 
 Part 2: We then perform a neural style transfer on this audio1.wav file to give it the style and texture of Obama’s voice. This outputs another audio2.wav audio file which now sounds like Obama.
