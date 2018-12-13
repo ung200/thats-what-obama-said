@@ -14,7 +14,7 @@ voice_transfer_input_dir = config.DIRS['voice_transfer_input']
 obama_address_dir = config.DIRS['obama_address']
 os.system('bash %sfetch.sh 8 11' % obama_address_dir)
 # copying output file to stlye transfer input location
-os.system('mv %obamae3sec.wav %/person3sec.wav' %(obama_address_dir, voice_transfer_input_dir))
+os.system('mv %obama3sec.wav %/person3sec.wav' %(obama_address_dir, voice_transfer_input_dir))
 
 
 # input above text file to Text-to-Speech, it reads this file from it's file hyperparams.py, which has this text filename hardcoded for now, will be automized in the future.

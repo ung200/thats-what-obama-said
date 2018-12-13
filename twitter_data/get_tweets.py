@@ -1,6 +1,6 @@
 import tweepy
 import pprint
-import config
+import config_sample as config
 import pandas as pd
 
 import re
