@@ -11,8 +11,8 @@ cuda = False
 if torch.cuda.is_available:
     cuda = True
 
-style_file = "input/obama6sec.wav"
-content_file = "input/person6sec.wav"
+style_file = "input/obama3sec.wav"
+content_file = "input/person3sec.wav"
 
 a_content, sr = wav2spectrum(content_file)
 a_style, sr = wav2spectrum(style_file)
@@ -33,13 +33,13 @@ print("Number of channels: ",N_CHANNELS)
 a_content_torch = torch.from_numpy(a_content)[None, None, :, :]
 if cuda:
     a_content_torch = a_content_torch.cuda()
-    
+
 
 a_style_torch = torch.from_numpy(a_style)[None, None, :, :]
 if cuda:
     a_style_torch = a_style_torch.cuda()
-    
-    
+
+
 
 
 a_S_var = Variable(a_style_torch, requires_grad=False).float().cuda()
