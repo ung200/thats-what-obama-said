@@ -3,7 +3,7 @@ import os
 
 
 # run twitter script
-# output is saved in twitter_dir, we take the long_tweets file, in accordance with DC_TTS limitations (they only take upto 155 char limit of each sentence.)
+# output is saved in twitter_dir, we take the long_tweets file, in accordance with DC_TTS limitations (there is a max char limit for each sentence.)
 twitter_dir = config.DIRS['twitter']
 os.system('python %s' % twitter_dir+'get_tweets.py')
 
